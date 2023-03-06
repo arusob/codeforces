@@ -1,14 +1,21 @@
-let charaters = "{a, b, c, a, b}"
-let selectDuplicate = ""
+// Problem - 443A - Codeforce
+// https://codeforces.com/problemset/problem/443/A
 
-function deleteSigns () {
-  newCharaters = charaters.replace('{','')
-  newCharaters1 = newCharaters.replace('}','')
-  newCharaters2 = newCharaters1.replaceAll(', ','')
+let charaters = "{a, b, c, a, b}"
+function numberOfDistinctLetters(charaters)  {
+  let selectDuplicates = ""
+  function deleteSigns () {
+    deleteLeftBrace = charaters.replace('{','')
+    deleteRightBrace = deleteLeftBrace.replace('}','')
+    removeCommas = deleteRightBrace.replaceAll(', ','')
+    }
+  deleteSigns()
+  for (i=0; i<=removeCommas.length; i++){
+    if (!selectDuplicates.includes(removeCommas.charAt(i))){
+      selectDuplicates += removeCommas.charAt(i)
+    }
   }
-deleteSigns()
-for (i=0; i<=newCharaters2.length; i++){
-  if (!selectDuplicate.includes(newCharaters2.charAt(i))){
-    selectDuplicate += newCharaters2.charAt(i)
-  }
+  return selectDuplicates.length
 }
+var distinctLetters = numberOfDistinctLetters(charaters) 
+console.log(distinctLetters)
