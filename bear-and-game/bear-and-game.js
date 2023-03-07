@@ -1,7 +1,6 @@
 // https://codeforces.com/problemset/problem/673/A
 
-//let tab = [7, 20, 88]   // output 35
-
+let tab = [7, 20, 88]; // output 35
 const boringTime = 15;
 function checkWhenIsBoring(tab) {
   if (tab[0] <= boringTime) {
@@ -10,7 +9,6 @@ function checkWhenIsBoring(tab) {
     return boringTime;
   }
 }
-console.log(checkWhenIsBoring(tab));
 function firstInterestingMinut(tab) {
   for (let i = 0; i <= tab.length - 1; i++) {
     var lastEl = tab[tab.length - 1];
@@ -21,3 +19,4 @@ function firstInterestingMinut(tab) {
     }
   }
 }
+var result = checkWhenIsBoring(tab);
