@@ -1,21 +1,21 @@
-// Problem - 443A - Codeforce
 // https://codeforces.com/problemset/problem/443/A
 
-let charaters = "{a, b, c, a, b}"
-function numberOfDistinctLetters(charaters)  {
-  let selectDuplicates = ""
-  function deleteSigns () {
-    deleteLeftBrace = charaters.replace('{','')
-    deleteRightBrace = deleteLeftBrace.replace('}','')
-    removeCommas = deleteRightBrace.replaceAll(', ','')
-    }
-  deleteSigns()
-  for (i=0; i<=removeCommas.length; i++){
-    if (!selectDuplicates.includes(removeCommas.charAt(i))){
-      selectDuplicates += removeCommas.charAt(i)
+var charaters = "{a, b, c, a, b}";
+
+function deleteSigns(charaters) {
+  var deleteLeftBrace = charaters.replace("{", "");
+  var deleteRightBrace = deleteLeftBrace.replace("}", "");
+  var removeCommas = deleteRightBrace.replaceAll(", ", "");
+  return removeCommas;
+}
+var removeCommas = deleteSigns(charaters);
+function numberOfDistinctLetters(removeCommas) {
+  let selectDuplicates = "";
+  for (i = 0; i <= removeCommas.length; i++) {
+    if (!selectDuplicates.includes(removeCommas.charAt(i))) {
+      selectDuplicates += removeCommas.charAt(i);
     }
   }
-  return selectDuplicates.length
+  return selectDuplicates.length;
 }
-var distinctLetters = numberOfDistinctLetters(charaters) 
-console.log(distinctLetters)
+var distinctLetters = numberOfDistinctLetters(removeCommas);
