@@ -1,35 +1,30 @@
-function showMinimum(wheels) {
-   if(wheels % 6 === 0) {
-       console.log("Minimum number of busses is:" + wheels/6)
-   }
+// https://codeforces.com/problemset/problem/1679/A
+
+var wheels = 24;
+var busSixWheels = 6;
+var busFourWheels = 4;
+
+function checkNumber(wheels) {
+  if (wheels % busSixWheels === 0 && wheels % busFourWheels !== 0) {
+    return numDivisibleBySix(wheels);
+  } else if (wheels % busFourWheels === 0 && wheels % busSixWheels !== 0) {
+    return divisibleByFour;
+  } else if (wheels % busSixWheels === 0 && wheels % busFourWheels === 0) {
+    var numDeivisbleBySicAndFour = [divisibleBySix, divisibleByFour];
+    return numDeivisbleBySicAndFour;
+  } else if (wheels % 4 !== 0 && wheels % 6 !== 0) {
+    return -1;
+  }
 }
-
-function showMaximum(wheels) {
-    if(wheels % 4 === 0){
-        console.log("Maximum number of busses is:" + wheels/4)
-    }
+function numDivisibleBySix(wheels) {
+  var min = wheels / busSixWheels;
+  return min;
 }
-
-function noSuitableNumber(wheels) {
-    if(wheels % 6 !== 0 && wheels % 4 !== 0){
-        console.log("-1")
-    }
+var divisibleBySix = numDivisibleBySix(wheels);
+function numDivisibleByFour(wheels) {
+  var max = wheels / busFourWheels;
+  return max;
 }
-
-function answerAvtoBus(wheels) {
-    showMinimum(wheels)
-    showMaximum(wheels)
-    noSuitableNumber(wheels)
-}
-
-answerAvtoBus(24)
-
-
-// 
-
-// pierwsza (1 =< t =< 1000)
-
-
-
-// dla każdego przypadku testowego wypisz minmalna i maxymalną liczbę autobusów
-// znajdujących się we flocie 
+var divisibleByFour = numDivisibleByFour(wheels);
+var result = checkNumber(wheels);
+console.log(result);
