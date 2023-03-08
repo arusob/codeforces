@@ -1,6 +1,7 @@
 // https://codeforces.com/problemset/problem/236/A
 
 let username = "wjmzbmr";
+
 function checkWhoItIs(username) {
   let addCharaters = "";
   for (i = 0; i <= username.length; i++) {
