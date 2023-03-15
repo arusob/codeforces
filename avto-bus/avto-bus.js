@@ -1,28 +1,20 @@
 // https://codeforces.com/problemset/problem/1679/A
 
 var wheels = 24;
-var busSixWheels = 6;
-var busFourWheels = 4;
+
 function checkNumber(wheels) {
-  if (wheels % busSixWheels === 0 && wheels % busFourWheels !== 0) {
-    return numDivisibleBySix(wheels);
-  } else if (wheels % busFourWheels === 0 && wheels % busSixWheels !== 0) {
-    return divisibleByFour;
-  } else if (wheels % busSixWheels === 0 && wheels % busFourWheels === 0) {
-    var numDeivisbleBySixAndFour = [divisibleBySix, divisibleByFour];
-    return numDeivisbleBySixAndFour;
+  let min = wheels / 6;
+  let max = wheels / 4;
+  if (wheels % 6 === 0 && wheels % 4 !== 0) {
+    return (result = [min]);
+  } else if (wheels % 4 === 0 && wheels % 6 !== 0) {
+    return (result = [max]);
+  } else if (wheels % 6 === 0 && wheels % 4 === 0) {
+    return (result = [min, max]);
   } else if (wheels % 4 !== 0 && wheels % 6 !== 0) {
-    return -1;
+    return (result = [-1]);
   }
+  return result;
 }
-function numDivisibleBySix(wheels) {
-  var min = wheels / busSixWheels;
-  return min;
-}
-var divisibleBySix = numDivisibleBySix(wheels);
-function numDivisibleByFour(wheels) {
-  var max = wheels / busFourWheels;
-  return max;
-}
-var divisibleByFour = numDivisibleByFour(wheels);
+
 var result = checkNumber(wheels);
