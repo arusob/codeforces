@@ -7,11 +7,14 @@ function checkNumber(wheels) {
   let max = wheels / 4;
   if (wheels % 6 === 0 && wheels % 4 !== 0) {
     return (result = [min]);
-  } else if (wheels % 4 === 0 && wheels % 6 !== 0) {
+  } 
+  if (wheels % 4 === 0 && wheels % 6 !== 0) {
     return (result = [max]);
-  } else if (wheels % 6 === 0 && wheels % 4 === 0) {
+  } 
+  if (wheels % 6 === 0 && wheels % 4 === 0) {
     return (result = [min, max]);
-  } else if (wheels % 4 !== 0 && wheels % 6 !== 0) {
+  } 
+  if (wheels % 4 !== 0 && wheels % 6 !== 0) {
     return (result = [-1]);
   }
   return result;
