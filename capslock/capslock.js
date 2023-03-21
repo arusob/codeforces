@@ -1,13 +1,10 @@
 // https://codeforces.com/problemset/problem/131/A
 
-var string = "cAPS";
+var input = "cAPS";
 
 function firstBigRestSmall(string) {
   let resultLow = string.toLowerCase();
-  let firstBig = resultLow[0].toUpperCase();
-  let restSmall = resultLow.substr(1, resultLow.length - 1);
-  let result = firstBig + restSmall;
-  return result;
+  return resultLow[0].toUpperCase() + resultLow.substr(1, resultLow.length - 1);
 }
 
-var output = firstBigRestSmall(string);
+var output = firstBigRestSmall(input);
