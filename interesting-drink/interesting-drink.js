@@ -3,7 +3,7 @@
 var input = 11
 
 function howManyShopsCanDrink (numberOfCoinsToSpent) {
-    let pricesOfTheBootles = [3, 10, 8, 6, 11] 
+    const pricesOfTheBootles = [3, 10, 8, 6, 11] 
     var numberOfCoinsToSpent 
     let numberOfShopWhereCanBuy = 0
     for(x=0; x <= pricesOfTheBootles.length; x++) {
