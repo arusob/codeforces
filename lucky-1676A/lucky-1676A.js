@@ -1,7 +1,7 @@
 // https://codeforces.com/problemset/problem/1676/A
 
 function ifTheTicketIsLucky(ticket) {
-  var ticketLength = ticket.length;
+  let ticketLength = ticket.length;
   let firstPartTicket = 0;
   for (let i = 0; i <= ticketLength / 2 - 1; i++) {
     firstPartTicket = firstPartTicket + Number(ticket.charAt(i));
