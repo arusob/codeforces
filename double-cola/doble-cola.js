@@ -27,9 +27,8 @@ function createArray(input) {
       }
     }
     return persons[input - 1];
-  } else {
-    return 0;
-  }
+  } 
+  return 0;
 }
 
 var output = createArray(input);
