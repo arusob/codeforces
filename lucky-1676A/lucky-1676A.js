@@ -1,14 +1,13 @@
 // https://codeforces.com/problemset/problem/1676/A
 
-var ticket = "045207";
-
 function ifTheTicketIsLucky(ticket) {
+  var ticketLength = ticket.length;
   let firstPartTicket = 0;
-  for (let i = 0; i <= ticket.length / 2 - 1; i++) {
+  for (let i = 0; i <= ticketLength / 2 - 1; i++) {
     firstPartTicket = firstPartTicket + Number(ticket.charAt(i));
   }
   let lastPartTicket = 0;
-  for (let j = ticket.length - 1; j >= ticket.length / 2; j--) {
+  for (let j = ticketLength - 1; j >= ticketLength / 2; j--) {
     lastPartTicket = lastPartTicket + Number(ticket.charAt(j));
   }
   if (firstPartTicket === lastPartTicket) {
@@ -16,6 +15,7 @@ function ifTheTicketIsLucky(ticket) {
   } else if (firstPartTicket != lastPartTicket) {
     return "NO";
   }
+  return "NO";
 }
 
-var output = ifTheTicketIsLucky(ticket);
+var output = ifTheTicketIsLucky("045207");
