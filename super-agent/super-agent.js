@@ -4,21 +4,19 @@ let input = ".XX...XX."
 
 function isThePasswordSymmetric (input) {
     let n = 0
-    let centralButton = Math.floor(input.length/2)
+    const inputLength = input.length
+    let centralButton = Math.floor(inputLength/2)
     let result = 0
     while (n < centralButton) {
         let elementFromStart = input.charAt(n)
-        let elementFromEnd = input.charAt((input.length-1)-n)
+        let elementFromEnd = input.charAt((inputLength-1)-n)
         if(elementFromStart === elementFromEnd) {
-            result += 1
+            result ++
         } 
         n++;
     }
-    if (result === 4) {
-        return "YES" 
-    } else {
-        return "NO"
-    }
+    return result === 4 ? "YES" 
+    : "NO"; 
 }
 
 var output = isThePasswordSymmetric (input)
