@@ -8,8 +8,7 @@ function howManyDaysToEndSocks(input) {
   if (n >= 1 && n <= 100 && m >= 2 && m <= 100) {
     const maxDaysStart = n + Math.floor(n/m);
     const maxDaysEnd = maxDaysStart - n;
-    const maxDays = Math.floor(maxDaysEnd/m) + maxDaysStart;
-    return maxDays;
+    return Math.floor(maxDaysEnd/m) + maxDaysStart;
   }
 }
 
