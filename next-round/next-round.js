@@ -3,40 +3,23 @@
 var qualification = "8 5";
 var participants = "10 9 8 7 7 7 5 5";
 
-function makeArrayFromQualification(qualification) {
-  let qualificationArray = qualification.split(" ");
-  let qualificationNumbersArray = [];
-  qualificationArray.forEach((element) =>
-    qualificationNumbersArray.push(element * 1)
-  );
-  return qualificationNumbersArray;
+function makeArr (arguments) {
+  let argumentsArray = arguments.split(" ")
+  argumentsArray.forEach(function(el,i,arr) { arr[i] = el * 1;})
+  return argumentsArray
 }
-var arrayOfQualificationNumners = makeArrayFromQualification(qualification);
 
-function makeArrayFromParticipants(participants) {
-  let participantsArray = participants.split(" ");
-  let participantsNumbersArray = [];
-  participantsArray.forEach((element) =>
-    participantsNumbersArray.push(element * 1)
-  );
-  return participantsNumbersArray;
-}
-var arrayOfParticipantsNumbers = makeArrayFromParticipants(participants);
+var arrQuali = makeArr (qualification)
+var arrParti = makeArr (participants)
 
-function analyzeParticipants(
-  arrayOfQualificationNumners,
-  arrayOfParticipantsNumbers
-) {
-  let advanceNextRound = [];
-  for (let i = 0; i <= arrayOfParticipantsNumbers.length - 1; i++) {
-    if (arrayOfParticipantsNumbers[i] > arrayOfQualificationNumners[1]) {
-      advanceNextRound.push(arrayOfParticipantsNumbers[i]);
-    }
+function analyzeParti(arrQuali, arrPartiNums) {
+  let advanceNextRound = []
+  for(let i=0; i<=arrPartiNums.length-1; i++) {
+      if(arrPartiNums[i] > arrQuali[1]) {
+        advanceNextRound.push(arrPartiNums[i])
+      }
   }
-  return advanceNextRound.length;
+  return advanceNextRound.length
 }
 
-var output = analyzeParticipants(
-  arrayOfQualificationNumners,
-  arrayOfParticipantsNumbers
-);
+var output = analyzeParti(arrQuali, arrParti)
