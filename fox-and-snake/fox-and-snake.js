@@ -1,7 +1,3 @@
-// https://codeforces.com/problemset/problem/510/A
-
-var rows = 9,
-  cells = 9;
 
 function drawPattern(rows, cells) {
   let emptyRows = "";
@@ -31,4 +27,4 @@ function drawPattern(rows, cells) {
   return output;
 }
 
-var output = drawPattern(rows, cells);
+module.exports = drawPattern;

@@ -1,8 +1,5 @@
-// https://codeforces.com/problemset/problem/706/B
 
-var input = 11
-
-function howManyShopsCanDrink (numberOfCoinsToSpent) {
+function howManyShops (numberOfCoinsToSpent) {
     const pricesOfTheBootles = [3, 10, 8, 6, 11] 
     var numberOfCoinsToSpent 
     let numberOfShopWhereCanBuy = 0
@@ -14,4 +11,4 @@ function howManyShopsCanDrink (numberOfCoinsToSpent) {
     return numberOfShopWhereCanBuy;
 }
 
-var output = howManyShopsCanDrink (input)
+module.exports = howManyShops;

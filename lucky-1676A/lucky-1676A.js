@@ -1,4 +1,3 @@
-// https://codeforces.com/problemset/problem/1676/A
 
 function ifTheTicketIsLucky(ticket) {
   let ticketLength = ticket.length;
@@ -18,4 +17,4 @@ function ifTheTicketIsLucky(ticket) {
   return "NO";
 }
 
-var output = ifTheTicketIsLucky("045207");
+module.exports = ifTheTicketIsLucky;

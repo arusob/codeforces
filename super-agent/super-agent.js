@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/12/A
-
-let input = ".XX...XX."
 
 function isThePasswordSymmetric (input) {
     let n = 0
@@ -19,4 +16,4 @@ function isThePasswordSymmetric (input) {
     : "NO"; 
 }
 
-var output = isThePasswordSymmetric (input)
+module.exports =  isThePasswordSymmetric;

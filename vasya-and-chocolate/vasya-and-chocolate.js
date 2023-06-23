@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/1065/A
-
-const input = [10, 3, 1, 1];
 
 function maximumPossibleNumberOfChocolateBars(input) {
   const roubles = input[0],
@@ -15,4 +12,4 @@ function maximumPossibleNumberOfChocolateBars(input) {
   return numberOfPaidBars + allBarsForFree;
 }
 
-var output = maximumPossibleNumberOfChocolateBars(input);
+module.exports =  maximumPossibleNumberOfChocolateBars;

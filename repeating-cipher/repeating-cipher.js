@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/1095/A
-
-var str = "ooopppssss";
 
 function printEnscriptOfString(str) {
   let enscript = "";
@@ -11,4 +8,4 @@ function printEnscriptOfString(str) {
   return enscript;
 }
 
-var output = printEnscriptOfString(str);
+module.exports =  printEnscriptOfString;

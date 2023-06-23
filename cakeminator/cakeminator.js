@@ -1,10 +1,6 @@
-// https://codeforces.com/problemset/problem/330/A
-
-var badCell = "s";
-var goodCell = ".";
-var input = ["s...", "....", "..s."];
 
 function analyzeColumn(input) {
+  var badCell = "s";
   var word = input[0];
   let arrayColumns = [];
   let arrBadColumns = [];
@@ -35,6 +31,7 @@ function analyzeColumn(input) {
 }
 
 function analyzeRows(input) {
+  var badCell = "s";
   let arrBadRows = [];
   let whichLineNumbersAreBad = [];
   let arrGoodRows = [];
@@ -57,7 +54,6 @@ function analyzeRows(input) {
 function calculate(input) {
   var columns = analyzeColumn(input);
   var rows = analyzeRows(input);
-
   if (rows[1] > columns[1]) {
     var repetitions = rows[1];
   } else if (rows[1] < columns[1]) {
@@ -69,4 +65,4 @@ function calculate(input) {
   return output;
 }
 
-var output = calculate(input);
+module.exports = calculate;

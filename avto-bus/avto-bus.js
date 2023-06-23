@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/1679/A
-
-var wheels = 24;
 
 function checkNumber(wheels) {
   let min = wheels / 6;
@@ -20,4 +17,4 @@ function checkNumber(wheels) {
   return result;
 }
 
-var result = checkNumber(wheels);
+module.exports = checkNumber;

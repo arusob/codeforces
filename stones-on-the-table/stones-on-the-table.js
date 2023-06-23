@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/266/A
-
-var stones = 5, colorsOfTheStones = "RRRRR";
 
 function howManyColorsTheSame (stones, colorsOfTheStones) {
     let theSameColors = 0
@@ -12,4 +9,4 @@ function howManyColorsTheSame (stones, colorsOfTheStones) {
     return theSameColors
 }
 
-var output = howManyColorsTheSame (stones, colorsOfTheStones)
+module.exports =  howManyColorsTheSame;

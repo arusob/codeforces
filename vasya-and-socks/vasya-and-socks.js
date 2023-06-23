@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/460/A
-
-var input = [9, 3];
 
 function howManyDaysToEndSocks(input) {
   const n = input[0];
@@ -12,4 +9,4 @@ function howManyDaysToEndSocks(input) {
   }
 }
 
-var output = howManyDaysToEndSocks(input);
+module.exports =  howManyDaysToEndSocks;

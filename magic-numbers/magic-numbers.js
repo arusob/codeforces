@@ -1,6 +1,3 @@
-// https://codeforces.com/problemset/problem/320/A
-
-var value = 14144411;
 
 function analyzeString(value) {
   const antyMagic = [0, 2, 3, 5, 6, 7, 8, 9, 444];
@@ -24,4 +21,4 @@ function analyzeString(value) {
   }
 }
 
-var output = analyzeString(value);
+module.exports = analyzeString;

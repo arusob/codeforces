@@ -1,28 +1,13 @@
-// https://codeforces.com/problemset/problem/109/A
-
-var input = 11;
 
 function calculateTheTask(input) {
   if (input % 7 === 0) {
-    return devideBySeven(input);
+    let resultFromDevideBySeven = input / 7;
+    return "7".repeat(resultFromDevideBySeven);
   }
   if (input % 4 === 0) {
-    return devideByFour(input);
+    let resultFromDevideByFour = input / 4;
+    return "4".repeat(resultFromDevideByFour);
   } 
-  return numberOfSevenAndFour(input);
-}
-
-function devideBySeven(input) {
-  let resultFromDevideBySeven = input / 7;
-  return "7".repeat(resultFromDevideBySeven);
-}
-
-function devideByFour(input) {
-  let resultFromDevideByFour = input / 4;
-  return "4".repeat(resultFromDevideByFour);
-}
-
-function numberOfSevenAndFour(input) {
   let fourSevenString = "";
   var i = 0;
   do {
@@ -40,7 +25,6 @@ function numberOfSevenAndFour(input) {
       return "-1";
     }
   } while (input > 0);
-
 }
 
-var output = calculateTheTask(input);
+module.exports = calculateTheTask;

@@ -1,9 +1,5 @@
-// https://codeforces.com/problemset/problem/1080/A
 
-const n = 15,
-  k = 6;
-
-function HowManyNotebooks(n, k) {
+function howManyNotebooks(n, k) {
   const red = 2;
   const green = 5;
   const blue = 8;
@@ -19,4 +15,4 @@ function HowManyNotebooks(n, k) {
   return redResults + greenResults + blueResults;
 }
 
-var output = HowManyNotebooks(n, k);
+module.exports =  howManyNotebooks;
